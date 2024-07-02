@@ -7,6 +7,7 @@
 
 一种是根据几何相似方法实现的测距，
 ![](./Notes/pic/widthdist.png)
+
 由几何关系得出 $\frac{W_p}{F}=\frac{W}{D}$
 只需预先校准 $F=\frac{W_{p0}}{W_0}\times D_0$
 则每次可根据 $D=\frac{W}{W_p}\times F$ 计算距离
@@ -41,6 +42,7 @@ ret = TargetDist.deal1frame(img)
 ## 各部分结构
 `Main/` 下是主体代码
 ![](./Notes/pic/main_struct.png)
+
 - `__createTable` 模块将原有的对象类别宽度信息规范保存到 json 文件中
 - `ProjectUtils` 模块封装了一些用于屏幕显示的工具函数，对识别到对象类别先验信息的读取，以及未来用于优化的数据结构。
 - `CameraCalibrate` 模块负责加载相机内参配置信息，如果读取失败则重新校准保存内参配置信息
